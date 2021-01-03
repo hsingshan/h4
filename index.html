@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>10614139</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="toutiaoNav/css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="toutiaoNav/js/swiper.min.js"></script>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+img{
+	width:100%;
+	line-height:0;
+}
+#TouchNav{width:100%;overflow:hidden;border-bottom:1px solid #f8f8f8;}
+#TouchNav .swiper-slide{width:3rem;padding: 10px 5px;letter-spacing:2px;text-align:center;}
+#TouchNav .swiper-slide span{transition:all .3s ease;display:block;}
+#TouchNav .active span{transform:scale(1.1);color:#5291D6;}
+
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top">
+            <div class="header">
+                <h1 class="title">合歡山</h1>
+                <div class="navbar">
+                    <ul>
+                        <li><a href="">首頁</a></li>
+                        <li><a href="">由來</a></li>
+                        <li><a href="">群峰</a></li>
+                        <li><a href="">住宿</a></li>
+                        <li><a href="">賞花</a></li>
+                        <li><a href="">雪景</a></li>
+                        <li><a href="">交通</a></li>
+                    </ul>
+                </div>
+                <img src="img/line.png" alt="">
+             </div>
+            <div class="nav">
+                <div id="TouchNav">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide active"><span class="gray">首頁</span></div>
+                      <div class="swiper-slide"><span class="gray">由來</span></div>
+                      <div class="swiper-slide"><span class="gray">群峰</span></div>
+                      <div class="swiper-slide"><span class="gray">住宿</span></div>
+                      <div class="swiper-slide"><span class="gray">賞花</span></div>
+                      <div class="swiper-slide"><span class="gray">雪景</span></div>
+                      <div class="swiper-slide"><span class="gray">交通</span></div>
+                    </div>
+                  </div>
+            
+            </div>
+            <div class="mainpicture">
+                <img src="img/IMG_20201025_134303.jpg" alt="">
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="leftpicture">
+                <img src="img/IMG_20201025_103732.jpg" alt="">
+                <h3 class="hidden">一個美到<br>不像在台灣的地方。</h3>
+            </div>
+            <div class="main">
+                <h3>一個美到<br>不像在台灣的地方。</h3>
+                <p>
+                    3,000公尺以上的高山，天空都特別藍。人在主峰，登高望遠，只見天藍雲白，晴空萬里；箭竹如茵，杜鵑燦爛。四面高山競秀，層峯疊巒，南北連綿起伏如蒼龍。藍天白雲底下，南北百萬山峰，山山相連，雄偉壯闊，一望無際。
+                    <br><br>
+                    南方海拔3,952公尺的台灣第一高山玉山，和北方海拔3,886公尺的台灣第二高山雪山，皆雄立在遠方的最高顛，領袖南北群峰，至尊雄姿，遠遠可見。
+                </p>
+                <img src="img/line.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var TouchNav = new Swiper('#TouchNav', {
+            freeMode: true,
+            freeModeMomentumRatio: 0.5,
+            centeredSlides : true,
+            centeredSlidesBounds:true,
+            slidesPerView: 'auto',
+            on:{
+                tap:function(){
+                    $("#TouchNav  .active").removeClass('active');
+                    $("#TouchNav .swiper-slide").eq(this.clickedIndex).addClass('active');
+                    TouchNav.slideTo(this.clickedIndex);
+                }
+            }
+            
+        });
+    </script>
+</body>
+</html>
