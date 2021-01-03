@@ -1,0 +1,266 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+.wrapper {
+    margin: 0 auto;
+}
+img{
+    display: block;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+}
+.header {
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+}
+.title{
+    color: #707070;
+    font-size: 80px;
+    padding: 60px 70px 0px 50px;
+    -webkit-writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
+}
+.navbar{
+    padding-top: 60px;
+}
+.navbar li{
+    height: 36px;
+}
+.navbar ul a{
+    font-size: 24px;
+    line-height: 1.5em;
+    text-decoration: none;
+    color: #707070;
+}
+.navbar ul a:hover{
+    color:#5291D6;
+}
+.header img{
+    width: 80%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.nav{
+    display: none;
+}
+.mainpicture{
+    width: 70%;
+}
+
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+}
+.leftpicture{
+    width: 30%;
+}
+.hidden{
+    display: none;
+}
+.main{
+    width: 70%;
+    padding: 60px 60px 0px 60px;
+    box-sizing: border-box;
+    position: relative;
+}
+h3{
+    color:#5291D6;
+    font-size: 30px;
+    line-height: 1.5em;
+}
+p{
+    color: #707070;
+    font-size: 16px;
+    line-height: 1.5em;
+    padding-top: 40px;
+}
+.main img{
+    width: 40%;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+@media (max-width:960px){
+    .title{
+        padding: 30px 40px 0px 30px;
+    }
+    .navbar{
+        padding-top: 30px;
+    }
+    .header img{
+        width: 60%;
+    }
+    .leftpicture{
+        width: 50%;
+    }
+    .main{
+        width: 50%;
+        padding: 30px 30px 0px 30px;
+    }
+    h3{
+        font-size: 30px;
+    }
+    .main img{
+        width: 70%;
+    }
+}
+
+@media (max-width:767px){
+    .top{
+        flex-direction: column;
+    }
+    .header{
+        width: 100%;
+        flex-direction: column;
+    }
+    .title{
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+        padding: 16px 0;
+        color: #fff;
+        background-color: #5291D6;
+        -webkit-writing-mode: horizontal-tb;
+        writing-mode: horizontal-tb;
+    }
+    .navbar{
+        width: 100%;
+        padding: 0;
+    }
+    .navbar ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .navbar ul a{
+        font-size: 16px;
+        line-height: 36px;
+    }
+    .header img{
+        display: none;
+    }
+    .mainpicture{
+        width: 100%;
+    }
+    .bottom{
+        padding: 36px 30px 0 30px;
+        flex-direction: column;
+    }
+    .leftpicture{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .leftpicture img{
+        width: 50%;
+    }
+    .hidden{
+        width: 50%;
+        margin: auto 0;
+        padding-left: 30px;
+        display: block;
+        color:#5291D6;
+        font-size: 30px;
+        line-height: 1.5em;
+    }
+    .main{
+        width: 100%;
+        padding: 0;
+    }
+    .main h3{
+        display: none;
+    }
+    .main p{
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    .main img{
+        width: 50%;
+    }
+}
+
+@media (max-width:414px){
+    .navbar{
+        display: none;
+    }
+    .nav{
+        display: block;
+    }
+   .gray{
+    color: #707070;
+   }
+   .bottom{
+    padding: 20px 10px 0 10px;
+   }
+   .leftpicture{
+       flex-direction: column-reverse;
+    }
+   .leftpicture img{
+        width: 100%;
+    }
+    .hidden{
+        width: 100%;
+        display: block;
+        padding: 0 0 20px 0;
+
+    }
+}
